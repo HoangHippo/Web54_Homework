@@ -13,10 +13,11 @@ html, body {
   li{
     position: relative;
     padding: 6px 0;
+    border: 15px solid white;
   }
   
   li button{
     position: absolute;
     right: 0;
-    left: 120px;
+    left: 160px;
   }

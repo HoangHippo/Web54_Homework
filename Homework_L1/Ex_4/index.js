@@ -36,8 +36,6 @@ function done(eventClick){
 }
 
 function deleteItem(eventClick){
-	let deleteBtns = document.getElementsByClassName("delete");
-	let ul = document.querySelector("ul");
 	ul.removeChild(eventClick.parentNode);
 }
 
