@@ -92,3 +92,12 @@ console.log(apples) // ['air', { model: 'm1' }, 'macbook2017']
 - Với các kiểu dữ liệu nguyên thủy, khi được gán giá trị sẽ được gắn chặt với biến, bạn sẽ không phải lo lắng về việc copy các biến này vì bạn sẽ luôn có được một ban sao thực thụ
 - Giải thích dòng code:
   Do đây là kiểu dữ liệu hỗn hợp, dự liệu trong bản gốc sẽ không được gán chặt với biến. Khi chúng ta thay đổi thì sẽ thay đổi được giá trị bản gốc ban đầu của nó
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Thực hành JS, HTML, CSS làm một trang web todo list gồm các tính năng sau:
+- Thêm công việc
+- Đánh dấu hoàn thành
+- Xoá công việc
+- Trang web mẫu:
+https://todo-eta-amber.vercel.app/
