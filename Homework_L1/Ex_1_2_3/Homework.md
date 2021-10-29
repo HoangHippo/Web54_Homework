@@ -1,33 +1,28 @@
 1. Cách kiểm tra một biến x cho trước là function, array, number, string, undefined
 
 - Đa số cách kiểm tra 1 biến cho trước thì sẽ sử dụng toán tử typeof
-- Nhưng có 1 vài trường hợp đặc biệt ví dụ như:
-```
-```
+- Nhưng có 1 vài trường hợp đặc biệt ví dụ như
 
-     + String
++ String
 
 ```
 const message = new String('This will not work');
 console.log(typeof message); //=> "object"
 ```
 
-    + Arrays: Cách đúng để kiểm tra xem một biến có phải là một mảng hay không bằng cách sử dụng phương thức tĩnh _Array.isArray ()
++ Arrays: Cách đúng để kiểm tra xem một biến có phải là một mảng hay không bằng cách sử dụng phương thức tĩnh _Array.isArray ()
 
 ```
 Array.isArray(someVar);
 Array.isArray([11, 22, 33]); //=> true
 Array.isArray({}); //=> false
 ```
-
-    + Funtion
-
++ Funtion
 ```
 const f = function() {};
 console.log(typeof f === 'function'); //=> true
 ```
-
-    + Objects
++ Objects
 ```
 const a = {};
 console.log(a === Object(a)); //=> true
@@ -44,13 +39,11 @@ console.log(d === Object(d)); //=> false
 const e = '';
 console.log(e === Object(e)); //=> false
 ```    
-
-    + Number: trong trường hợp bạn cũng cần kiểm tra các đối tượng trình bao bọc và không chỉ các giá trị nguyên thủy, bạn có thể kết hợp typeof và instanceof:
++ Number: trong trường hợp bạn cũng cần kiểm tra các đối tượng trình bao bọc và không chỉ các giá trị nguyên thủy, bạn có thể kết hợp typeof và instanceof:
 ```
 const isNumber = value => typeof value === 'number' || value instanceof Number;
 ```
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Tìm hiểu về Event loop, giải thích tại sao đoạn code sau chữ Một lại hiện sau chữ Hai?
 
@@ -75,6 +68,8 @@ second();
   - Các lệnh sẽ được thêm lần lượt vào callStack để chạy, chạy đến setTimeOut, callback(function()) sẽ được ném tới WebAPIs, nhưng là do timeout set = 0 nên sẽ được ném ngay vào callback Queue, chờ lúc callStack rỗng, EventLoop sẽ bốc lên thì lúc đó hàm mới chạy
   - Còn funtion second không bị phụ thuộc vào gì hết nên sẽ chạy trực tiếp nên sẽ hiện Hai trước Một
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 3. Tìm hiểu về deep copy và shallow copy trong JS. Giải thích kết quả của đoạn code sau.
 
 ```
@@ -87,7 +82,7 @@ console.log(apples) // ['air', { model: 'm1' }, 'macbook2017']
 ```
 
 - Deep copy: tức là tạo mới một biến có cùng giá trị và được cắt đứt quan hệ hoàn toàn với biến được copy
-- Shallow copy: có ý nghĩa rằng sau khi copy, biến mới hoặc các thành phần của biến mới vẫn còn quan hệ dây mơ rễ má với biến ban đầu, nguy hiểm quá nhỉ. Để hiểu thêm về copy, chúng ta cùng tìm hiểu về cách Javascript lưu dữ liệu.
+- Shallow copy: có ý nghĩa rằng sau khi copy, biến mới hoặc các thành phần của biến mới vẫn còn quan hệ dây mơ rễ má với biến ban đầu
 - Các kiểu dữ liệu: 
     + Number  
     + String 
