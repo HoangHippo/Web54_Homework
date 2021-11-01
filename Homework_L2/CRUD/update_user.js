@@ -5,7 +5,7 @@ const updateUser = (id, { username, password }) => {
     if (err) throw err;
     const users = JSON.parse(data);
     console.log(users);
-    const result = users.find((value, index) => {
+    const $update = users.find((value, index) => {
       if (value.id === id) {
         users[index].username = username;
         users[index].password = password;
